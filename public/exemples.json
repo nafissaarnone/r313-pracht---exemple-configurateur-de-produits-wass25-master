@@ -1,0 +1,32 @@
+[
+        {
+                "semelle": "#FF5733",
+                "empeigne": "#33FF90",
+                "pointe": "#6833FF",
+                "oeillet": "#FF3390 ",
+                "bande": "#39FF33 ",
+                "languette": "#33DAFF ",
+                "lacet": "#49501B ",
+                "trimestre": "#000000 "
+        },
+        {
+                "semelle": "#29BF7A ",
+                "empeigne": "#2952BF",
+                "pointe": "#522021",
+                "oeillet": "#07003F",
+                "bande": "#63856A",
+                "languette": "#D7F900",
+                "lacet": "#434B12",
+                "trimestre": "#FFFFFF"
+        },
+        {
+                "semelle": "#00F89C",
+                "empeigne": "#2B7000",
+                "pointe": "#869BAD",
+                "oeillet": "#72008C",
+                "bande": "#000000",
+                "languette": "#FF0000",
+                "lacet": "#DDA016",
+                "trimestre": "#6A6A6A"
+        }
+]
