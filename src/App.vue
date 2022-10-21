@@ -7,7 +7,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="text-red-600 underline" to="/basket/new">
+        <router-link class="text-red-600 underline" to="/basket/edit/id">
           Personnaliser une Basket
         </router-link>
       </li>

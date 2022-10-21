@@ -5,13 +5,19 @@ import { ref } from "vue";
 
 import BasketProfil from "./BasketProfil.vue";
 import BasketDessus from "./BasketDessus.vue";
-
-import { colors } from "../types";
 import FormKitListColors from "./FormKitListColors.vue";
 
 const props = defineProps(["id"]);
 const Baskete = ref<Basket>({});
 
+async function upsertBasket(dataForm, node) {
+    const { data, error } = await supabase.from("Chaussure").upsert(dataForm);
+    if (error) node.setErrors([error.message]);
+    else {
+        node.setErrors([]);
+        router.push({ name: "basket-edit-id", params: { id: data[0].id } });
+    }
+}
 
 if (props.id) {
     let { data, error } = await supabase
@@ -39,7 +45,7 @@ if (props.id) {
             <BasketDessus class="carousel-item w-64" v-bind="Baskete" id="dessus" />
         </div>
 
-        <FormKit type="form" v-model="Baskete">
+        <FormKit type="form" v-model="Baskete" @submit="upsertBasket">
             <FormKitListColors name="semelle" label="semelle" />
             <FormKitListColors name="empeigne" label="empeigne" />
             <FormKitListColors name="pointe" label="pointe" />
