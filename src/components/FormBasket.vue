@@ -7,6 +7,7 @@ import BasketProfil from "./BasketProfil.vue";
 import BasketDessus from "./BasketDessus.vue";
 
 import { colors } from "../types";
+import FormKitListColors from "./FormKitListColors.vue";
 
 const props = defineProps(["id"]);
 const Baskete = ref<Basket>({});
@@ -39,14 +40,14 @@ if (props.id) {
         </div>
 
         <FormKit type="form" v-model="Baskete">
-            <FormKit name="semelle" label="semelle" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="pointe" label="pointe" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="bande" label="bande" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="languette" label="languette" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="lacet" label="lacet" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="trimestre" label="trimestre" value="#FFFFFF" type="radio" :options="colors" />
+            <FormKitListColors name="semelle" label="semelle" />
+            <FormKitListColors name="empeigne" label="empeigne" />
+            <FormKitListColors name="pointe" label="pointe" />
+            <FormKitListColors name="oeillet" label="oeillet" />
+            <FormKitListColors name="bande" label="bande" />
+            <FormKitListColors name="languette" label="languette" />
+            <FormKitListColors name="lacet" label="lacet" />
+            <FormKitListColors name="trimestre" label="trimestre" />
 
         </FormKit>
     </div>
